@@ -1,0 +1,28 @@
+{
+  "name": "LoadFiles",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "description": "seleniumようのテストケースを作成する。",
+  "browser_action": {
+    "default_icon": "icn.png",
+    "default_popup": "index.html",
+    "default_title": "LoadFiles"
+    },
+    "background": {
+    "scripts": ["bg.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["jquery-1.10.2.min.js","script.js"]
+    }
+  ],
+  "permissions": [
+  "activeTab",
+  "tabs"
+  ]
+}
